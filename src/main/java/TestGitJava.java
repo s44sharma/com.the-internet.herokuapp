@@ -15,6 +15,7 @@ public class TestGitJava {
 		// TODO Auto-generated method stub
 
 		System.out.println("Test Git Message");
+		System.out.println("New Test Git Message");
 	}
 
 }
