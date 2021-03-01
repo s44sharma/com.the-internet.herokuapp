@@ -5,4 +5,80 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>the-internet.herokuappSeleniumAutomation</name>
   <description>SeleniumAutomationOf_the-internet.herokuapp</description>
+  	<dependencies>
+
+<!-- To use DefaultSelenium or one of the new WebDriver implementations -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+
+<!-- To get started with TestNG -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<scope>test</scope>
+		</dependency>
+
+<!-- JExcelApi is a java library which provides the ability to read, write, and modify Microsoft Excel spreadsheets. -->
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+
+<!-- ReportNG is a simple HTML reporting plug-in for the TestNG unit-testing framework -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+		</dependency>
+
+<!-- The Apache Commons IO library contains utility classes, stream implementations, file filters, file comparators -->
+		<dependency>
+			<groupId>org.apache.directory.studio</groupId>
+			<artifactId>org.apache.commons.io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+
+						<!-- All Below are Added for Jenkins -->
+
+<!-- To get started with JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<!-- The maven compiler plugin is used to compile the source code of a Maven project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+
+			<!-- To run the project tests, also allows to configure which XML suites to execute when we build our project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<inherited></inherited>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
